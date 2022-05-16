@@ -12,6 +12,18 @@
 
 [https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-elastic-agent-fleet-configuration-examples.html](https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-elastic-agent-fleet-configuration-examples.html)
 
+# Java Elastic APM Demo
+[https://github.com/elastic/opbeans-java](https://github.com/elastic/opbeans-java)
+```
+java -javaagent:./elastic-apm-agent-1.30.1.jar \                                                                   ✔  took 15s   at 00:55:32 
+-Delastic.apm.service_name=opbeans-java \
+-Delastic.apm.server_urls=http://localhost:8200 \
+-Delastic.apm.secret_token= \
+-Delastic.apm.environment=production \
+-Delastic.apm.application_packages=co.elastic.apm.opbeans -jar \
+./target/opbeans-0.0.1-SNAPSHOT.jar
+```
+
 # Install ArgoCD
 
 1. `kubectl create namespace argocd`
